@@ -68,6 +68,7 @@ class Pilotos_Plugin_Admin {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/custom_fields/categorias-fields.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/custom_taxonomy/categorias-taxonomy.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/custom_taxonomy/especialidades-taxonomy.php';
+		
 
 
 

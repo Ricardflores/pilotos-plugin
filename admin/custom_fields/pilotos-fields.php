@@ -1,7 +1,4 @@
 <?php
-/* ------------------------------ post personalizados -------------*/ 
-
-
 if (!function_exists('pilotos_metaboxes')){
 
     function pilotos_metaboxes() {
