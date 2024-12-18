@@ -160,36 +160,3 @@ if (!function_exists('karting_redes')){
     add_action( 'cmb2_init', 'karting_redes' );
 }
 
-if (!function_exists('Seleccion')){
-
-    function Seleccion() {
-
-        // Registra un nuevo metabox
-        $prefix = 'seleccion_'; // Prefijo para los IDs de los campos
-
-        $cmb = new_cmb2_box( array(
-            'id'            => $prefix . 'metabox',
-            'title'          => __( 'Seleccion', 'http://primerapagina.local/' ),
-            'object_types'   => array( 'karting' ), // Cambia 'product' por tu tipo de publicación
-            'context'        => 'normal',
-            'priority'      => 'high',
-            'show_names'     => true,
-        ) );
-
-        $cmb->add_field( array(
-            'name'      	=> __( 'Example Multiple', 'cmb2' ),
-            'id'        	=> $prefix . 'buscar_karting',
-            'type'      	=> 'post_search_ajax',
-            'desc'			=> __( '(Start typing post title)', 'cmb2' ),
-            // Optional :
-            'limit'      	=> 10, 		// Limit selection to X items only (default 1)
-            'sortable' 	 	=> true, 	// Allow selected items to be sortable (default false)
-            'query_args'	=> array(
-                'post_type'			=> array( 'page' ),
-                'post_status'		=> array( 'publish' ),
-                'posts_per_page'	=> -1
-            )
-        ) );
-    }
-    add_action( 'cmb2_init', 'Seleccion' );
-}

@@ -237,28 +237,28 @@ if (!function_exists('pilotos_redes')){
         $cmb->add_field( array(
             'name'       => __( 'RedF', 'http://primerapagina.local/' ),
             'id'         => $prefix . 'Red_piloto1',
-            'type'       => 'text',
+            'type'       => 'text_url',
         ) );
     
             // Agrega campos al metabox
             $cmb->add_field( array(
             'name'       => __( 'RedT', 'http://primerapagina.local/' ),
             'id'         => $prefix . 'Red_piloto2',
-            'type'       => 'text',
+            'type'       => 'text_url',
         ) );
     
              // Agrega campos al metabox
             $cmb->add_field( array(
             'name'       => __( 'RedP', 'http://primerapagina.local/' ),
             'id'         => $prefix . 'Red_piloto3',
-            'type'       => 'text',
+            'type'       => 'text_url',
         ) );
     
              // Agrega campos al metabox
              $cmb->add_field( array(
                 'name'       => __( 'RedY', 'http://primerapagina.local/' ),
                 'id'         => $prefix . 'Red_piloto4',
-                'type'       => 'text',
+                'type'       => 'text_url',
             ) );
     }
     add_action( 'cmb2_init', 'pilotos_redes' );

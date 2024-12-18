@@ -465,6 +465,21 @@ function yourprefix_register_demo_metabox() {
 		'after_row'    => '<p>Testing <b>"after_row"</b> parameter</p>',
 	) );
 
+	$cmb_demo->add_field( array(
+		'name'      	=> __( 'este campo de llevar a karting', 'cmb2' ),
+		'id'        	=>'yourprefix_demo_ajax',
+		'type'      	=> 'post_search_ajax',
+		'desc'			=> __( '(Start typing post title)', 'cmb2' ),
+		// Optional :
+		'limit'      	=> 10, 		// Limit selection to X items only (default 1)
+		'sortable' 	 	=> true, 	// Allow selected items to be sortable (default false)
+		'query_args'	=> array(
+			'post_type'			=> array( 'piloto' ),
+			'post_status'		=> array( 'publish' ),
+			'posts_per_page'	=> -1
+		)
+	) );
+
 }
 
 add_action( 'cmb2_admin_init', 'yourprefix_register_about_page_metabox' );

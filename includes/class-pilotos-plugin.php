@@ -105,6 +105,8 @@ class Pilotos_Plugin {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-pilotos-plugin-loader.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/cmb2-functions.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/cmb2-field-post-search-ajax-master/cmb-field-post-search-ajax.php';
+
 
 
 		/**
