@@ -53,7 +53,7 @@ if (!function_exists('pilotos_post_type')) {
                 'publicly_queryable'    => true,
                 'capability_type'       => 'page',
             );
-            register_post_type( 'Piloto', $args );
+            register_post_type( 'piloto', $args );
 
         }
         add_action( 'init', 'pilotos_post_type', 0 );

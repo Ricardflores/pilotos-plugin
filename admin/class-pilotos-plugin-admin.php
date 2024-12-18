@@ -60,14 +60,15 @@ class Pilotos_Plugin_Admin {
 		/**
 		 * This section is responsible to add the CMB2 Metaboxes
 		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/cpt/pilotos-post-type.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/cpt/karting-post-type.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/cpt/ejercicios-post-type.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/cpt/pilotos-post-type.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/custom_fields/page-fields.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/custom_fields/pilotos-fields.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/custom_fields/karting-fields.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/custom_fields/categorias-fields.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/custom_taxonomy/categorias-taxonomy.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/custom_taxonomy/categorias-karting-taxonomy.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/custom_taxonomy/especialidades-taxonomy.php';
 		
 

@@ -1,4 +1,31 @@
 <?php
+if (!function_exists('descripcion')){
+
+    function descripcion() {
+
+        // Registra un nuevo metabox
+        $prefix = 'campo_'; // Prefijo para los IDs de los campos
+
+        $cmb = new_cmb2_box( array(
+            'id'            => $prefix . 'metabox',
+            'title'          => __( 'Descripcion', 'http://primerapagina.local/' ),
+            'object_types'   => array( 'karting' ), // Cambia 'product' por tu tipo de publicación
+            'context'        => 'normal',
+            'priority'      => 'high',
+            'show_names'     => true,
+        ) );
+        
+            // Agrega campos al metabox
+            $cmb->add_field( array(
+                'name'       => __( 'descripcion', 'http://primerapagina.local/' ),
+                'id'         => $prefix . 'descripcion',
+                'type'       => 'text',
+            ) );
+
+    }
+    add_action( 'cmb2_init', 'descripcion' );
+}
+
 if (!function_exists('kart_galeria')){
 
     function kart_galeria() {
@@ -16,20 +43,19 @@ if (!function_exists('kart_galeria')){
         ) );
         
         $cmb->add_field( array(
-            'name'         => esc_html__( 'Multiple Files', 'cmb2' ),
-            'desc'         => esc_html__( 'Upload or add multiple images/attachments.', 'cmb2' ),
-            'id'           => $prefix . 'kart_galeria',
-            'type'         => 'file_list',
-            'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+            'name'    => 'Imagen 1 ',
+            'desc'    => 'Upload an image or enter an URL.',
+            'id'      => 'Imagen_1',
+            'type'    => 'file',
         ) );
 
     }
     add_action( 'cmb2_init', 'kart_galeria' );
 }
 
-if (!function_exists('Horarios_karting') ) {
+if (!function_exists('horarios_karting') ) {
 
-    function Horarios_karting() {
+    function horarios_karting() {
 
             // Registra un nuevo metabox
             $prefix = 'horarios_'; // Prefijo para los IDs de los campos
@@ -52,7 +78,7 @@ if (!function_exists('Horarios_karting') ) {
 
             $cmb->add_field( array(
                 'name'       => __( 'precio1', 'http://primerapagina.local/' ),
-                'id'         => $prefix . 'precio_karting1',
+                'id'         => $prefix . 'precio1',
                 'type'       => 'text',
             ) );
 
@@ -64,7 +90,7 @@ if (!function_exists('Horarios_karting') ) {
 
             $cmb->add_field( array(
                 'name'       => __( 'precio2', 'http://primerapagina.local/' ),
-                'id'         => $prefix . 'precio_karting2',
+                'id'         => $prefix . 'precio2',
                 'type'       => 'text',
             ) );
 
@@ -76,10 +102,94 @@ if (!function_exists('Horarios_karting') ) {
 
             $cmb->add_field( array(
                 'name'       => __( 'precio3', 'http://primerapagina.local/' ),
-                'id'         => $prefix . 'precio_karting3',
+                'id'         => $prefix . 'precio3',
                 'type'       => 'text',
             ) );
 
-    add_action( 'cmb2_init', 'Horarios_karting' );
+
+        }
+
+    add_action( 'cmb2_init', 'horarios_karting' );
+   
+}
+if (!function_exists('karting_redes')){
+
+
+    function karting_redes() {
+
+        // Registra un nuevo metabox
+        $prefix = 'Redes2_'; // Prefijo para los IDs de los campos
+
+        $cmb = new_cmb2_box( array(
+            'id'            => $prefix . 'metabox',
+            'title'          => __( 'Redes_sociales', 'http://primerapagina.local/' ),
+            'object_types'   => array( 'karting' ), // Cambia 'product' por tu tipo de publicación
+            'context'        => 'normal',
+            'priority'      => 'high',
+            'show_names'     => true,
+        ) );
+
+        // Agrega campos al metabox
+        $cmb->add_field( array(
+            'name'       => __( 'RedF', 'http://primerapagina.local/' ),
+            'id'         => $prefix . 'Red_karting1',
+            'type'       => 'text',
+        ) );
+    
+            // Agrega campos al metabox
+            $cmb->add_field( array(
+            'name'       => __( 'RedT', 'http://primerapagina.local/' ),
+            'id'         => $prefix . 'Red_karting2',
+            'type'       => 'text',
+        ) );
+    
+             // Agrega campos al metabox
+            $cmb->add_field( array(
+            'name'       => __( 'RedP', 'http://primerapagina.local/' ),
+            'id'         => $prefix . 'Red_karting3',
+            'type'       => 'text',
+        ) );
+    
+             // Agrega campos al metabox
+             $cmb->add_field( array(
+                'name'       => __( 'RedY', 'http://primerapagina.local/' ),
+                'id'         => $prefix . 'Red_karting4',
+                'type'       => 'text',
+            ) );
     }
+    add_action( 'cmb2_init', 'karting_redes' );
+}
+
+if (!function_exists('Seleccion')){
+
+    function Seleccion() {
+
+        // Registra un nuevo metabox
+        $prefix = 'seleccion_'; // Prefijo para los IDs de los campos
+
+        $cmb = new_cmb2_box( array(
+            'id'            => $prefix . 'metabox',
+            'title'          => __( 'Seleccion', 'http://primerapagina.local/' ),
+            'object_types'   => array( 'karting' ), // Cambia 'product' por tu tipo de publicación
+            'context'        => 'normal',
+            'priority'      => 'high',
+            'show_names'     => true,
+        ) );
+
+        $cmb->add_field( array(
+            'name'      	=> __( 'Example Multiple', 'cmb2' ),
+            'id'        	=> $prefix . 'buscar_karting',
+            'type'      	=> 'post_search_ajax',
+            'desc'			=> __( '(Start typing post title)', 'cmb2' ),
+            // Optional :
+            'limit'      	=> 10, 		// Limit selection to X items only (default 1)
+            'sortable' 	 	=> true, 	// Allow selected items to be sortable (default false)
+            'query_args'	=> array(
+                'post_type'			=> array( 'page' ),
+                'post_status'		=> array( 'publish' ),
+                'posts_per_page'	=> -1
+            )
+        ) );
+    }
+    add_action( 'cmb2_init', 'Seleccion' );
 }
