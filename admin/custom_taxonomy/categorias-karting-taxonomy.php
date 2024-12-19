@@ -34,7 +34,7 @@ if (!function_exists('Categorias_karting_taxonomy') ) {
             'show_in_nav_menus'          => true,
             'show_tagcloud'              => true,
         );
-        register_taxonomy( 'Categoria', array( 'karting' ), $args );
+        register_taxonomy( 'Categoria_karting', array( 'karting' ), $args );
     
     }
     add_action( 'init', 'Categorias_karting_taxonomy', 0 );
