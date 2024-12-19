@@ -28,6 +28,7 @@ if (!function_exists('descripcion')){
 
 if (!function_exists('kart_galeria')){
 
+
     function kart_galeria() {
 
         // Registra un nuevo metabox
@@ -43,16 +44,16 @@ if (!function_exists('kart_galeria')){
         ) );
         
         $cmb->add_field( array(
-            'name'    => 'Imagen 1 ',
-            'desc'    => 'Upload an image or enter an URL.',
-            'id'      => 'Imagen_1',
-            'type'    => 'file',
+            'name'         => esc_html__( 'Multiple Files', 'cmb2' ),
+            'desc'         => esc_html__( 'Upload or add multiple images/attachments.', 'cmb2' ),
+            'id'           => $prefix . 'kartingg',
+            'type'         => 'file_list',
+            'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
         ) );
 
     }
     add_action( 'cmb2_init', 'kart_galeria' );
 }
-
 if (!function_exists('horarios_karting') ) {
 
     function horarios_karting() {
